@@ -39,6 +39,7 @@ let g:UltiSnipsExpandTrigger = "<c-j>"
 "let g:UltiSnipsJumpForwardTrigger = "<tab>"
 "let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+au BufRead,BufNewFile *.jack setfiletype java
 let g:airline#extensions#whitespace#enabled = 0
 let g:vaxe_lime_target = "linux neko"
 let g:ycm_min_num_of_chars_for_completion = 1
@@ -57,5 +58,10 @@ set autowrite
 set confirm
 set guifont=Ubuntu\ Mono\ 11
 set guioptions-=r
+set mouse=a
 inoremap jk <ESC>
 colorscheme molokai
+
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
