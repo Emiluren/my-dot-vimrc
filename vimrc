@@ -59,7 +59,10 @@ set confirm
 set guifont=Ubuntu\ Mono\ 11
 set guioptions-=r
 set mouse=a
+set hidden
 inoremap jk <ESC>
+" Copying to system clipboard
+vnoremap <C-c> "+y
 colorscheme molokai
 
 if $COLORTERM == 'gnome-terminal'
